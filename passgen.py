@@ -27,14 +27,14 @@ def main():
         digits = input("Include numbers? [Y/n]: ").lower() != "n"
         symbols = input("Include symbols? [Y/n]: ").lower() != "n"
 
-        password = generate_password(
+        p = generate_password(
             length=length,
             use_digits=digits,
             use_symbols=symbols
         )
 
         print("\nGenerated password:")
-        print(password)
+        print(p)
 
     except ValueError as error:
         print(f"\n❌ Error: {error}")
